@@ -12,7 +12,7 @@ function exactMatch (drivers, matchObject) {
   value = matchObject[key];
   console.log("drivers",JSON.stringify(drivers));
   console.log("Matching",key, value);
-  let result = drivers.map ( function (driver) {
+  let result = drivers.filter ( function (driver) {
     console.log("cb driver",driver,"key",driver[key]);
     console.log("cb result",(driver[key] === value));
     return driver[key] === value
