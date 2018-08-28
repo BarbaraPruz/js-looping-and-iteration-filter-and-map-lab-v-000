@@ -11,11 +11,12 @@ function exactMatch (drivers, matchObject) {
   key = Object.keys(matchObject)[0];
   value = matchObject[key];
   console.log("drivers",JSON.stringify(drivers));
-  console.log("matchobj",JSON.stringify(matchObject));
   console.log("Matching",key, value);
-  return drivers.map ( function (driver) {
+  let result = drivers.map ( function (driver) {
     console.log("cb driver",driver,"key",driver[key]);
     console.log("cb result",(driver[key] === value));
     driver[key] === value
   });
+  console.log("result",result);
+  return result;
 }
