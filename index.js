@@ -15,7 +15,7 @@ function exactMatch (drivers, matchObject) {
   let result = drivers.map ( function (driver) {
     console.log("cb driver",driver,"key",driver[key]);
     console.log("cb result",(driver[key] === value));
-    driver[key] === value
+    return driver[key] === value
   });
   console.log("result",result);
   return result;
