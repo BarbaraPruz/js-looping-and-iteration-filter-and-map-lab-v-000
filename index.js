@@ -13,3 +13,6 @@ function exactMatch (drivers, matchObject) {
   return drivers.filter ( driver => driver[key] === value );
 }
 
+function exactMatchToList(drivers,matchObject) {
+  return exactMatch(drivers,matchObject).filter ( driver => driver.name);
+}
